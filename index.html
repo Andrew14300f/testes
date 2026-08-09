@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Notas SAC</title>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Cabeçalho Principal -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">§</div>
+      <div>
+        <h1>Painel de Notas SAC</h1>
+        <p class="brand-sub">Respostas rápidas e suporte com IA</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btnGerenciar" class="btn-manage">⚙️ Gerenciar / Trocar Mensagens</button>
+    </div>
+  </header>
+
+  <!-- Grid de Colunas (Notas 1 a 12) -->
+  <div class="grid-container">
+    
+    <!-- Coluna 1 -->
+    <div class="coluna">
+      
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 01</span>
+        <textarea id="nota1" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota1', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 02</span>
+        <textarea id="nota2" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota2', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 03</span>
+        <textarea id="nota3" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota3', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 04</span>
+        <textarea id="nota4" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota4', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Coluna 2 -->
+    <div class="coluna">
+      
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 05</span>
+        <textarea id="nota5" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota5', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 06</span>
+        <textarea id="nota6" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota6', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 07</span>
+        <textarea id="nota7" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota7', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 08</span>
+        <textarea id="nota8" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota8', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Coluna 3 -->
+    <div class="coluna">
+      
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 09</span>
+        <textarea id="nota9" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota9', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 10</span>
+        <textarea id="nota10" class="note-text"></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota10', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 11</span>
+        <textarea id="nota11" class="note-text" placeholder="Nota livre..."></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota11', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+      <div class="nota-card" draggable="true">
+        <span class="note-index mono">Nº 12</span>
+        <textarea id="nota12" class="note-text" placeholder="Nota livre..."></textarea>
+        <div class="note-footer">
+          <button class="btn-action" onclick="copiarTexto('nota12', this)">Copiar</button>
+          <span class="msg-status"></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Área Final (Nota 13 com IA) -->
+  <div class="area-final">
+    <div class="nota-card nota-13">
+      <div class="note-header-ia">
+        <span class="note-index mono">Nº 13 — IA ASSISTANT</span>
+      </div>
+      <textarea id="nota13" placeholder="Digite aqui sua nota personalizada em branco para reescrever ou melhorar com IA..."></textarea>
+      
+      <div class="centralizar-btn">
+        <button onclick="copiarTexto('nota13', this)" class="btn-copiar">Copiar Nota em Branco</button>
+        <button onclick="melhorarTexto()" id="btnMelhorar" class="btn-ia">✨ Melhorar com IA</button>
+      </div>
+      <div id="msg13" class="msg-status-ia"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL PARA EDICÃO DE MENSAGENS -->
+<div id="modalGerenciar" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>⚙️ Gerenciar Mensagens Padrão</h2>
+      <button id="btnCloseModal" class="close-btn">&times;</button>
+    </div>
+    <p class="modal-sub">Altere o texto de qualquer nota abaixo. Todas as alterações são salvas automaticamente!</p>
+    
+    <div id="editorMensagensList" class="editor-list">
+      <!-- Gerado via JavaScript -->
+    </div>
+
+    <div class="modal-footer">
+      <button id="btnRestaurarPadrao" class="btn-danger">↺ Restaurar Padrões Originais</button>
+      <button id="btnSalvarMensagens" class="btn-copiar">💾 Salvar e Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
